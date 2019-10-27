@@ -95,7 +95,7 @@ export default {
 .slider .slider-image {
   width: 1032px;
   overflow: hidden;
-  margin: 0 15px 0 15px;
+  margin: 0 15px;
 }
 
 .slider button {
@@ -126,7 +126,7 @@ export default {
 
 .additional-info ul li h2 {
   color: #b79b6c;
-  font-size: 2.3em;
+  font-size: 48px;
   font-weight: 400;
   margin: 0;
 }
@@ -156,13 +156,45 @@ sup {
   .additional-info ul li {
     position: relative;
     width: 50%;
-    padding: 20px;
+    padding: 10px 0 10px 20px;
     border-bottom: 2px solid #f1f1f1;
     outline: none;
     box-sizing: border-box;
   }
-  .additional-info ul li:nth-child(odd) {
-    border-right: 2px solid #f1f1f1;
+  .additional-info ul li:nth-child(1) h2:after,
+  .additional-info ul li:nth-child(5) h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2px;
+    height: 80%;
+    background-color: #f1f1f1;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 765px) {
+  .slider-wrapper {
+    margin: 0 15px;
+  }
+  .slider {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .slider-title,
+  .additional-info ul li h2 {
+    font-size: 24px;
+  }
+  .slider .slider-image {
+    margin: 0;
+  }
+  .slider button {
+    order: 1;
+    margin-top: 15px;
+  }
+  .additional-info p {
+    margin: 5px 0 0 0 ;
+    font-size: 16px;
   }
 }
 </style>
